@@ -1,0 +1,17 @@
+# Sensitive/private working area
+private/**
+!private/.gitkeep
+
+# Common secret and local artifacts
+*.pem
+*.key
+*.env
+*.env.*
+*.tfstate
+*.tfstate.*
+
+# Editor/OS noise
+.DS_Store
+*.swp
+.vscode/
+.idea/
