@@ -34,6 +34,11 @@ Desarrollar un sistema de aprendizaje y ejecución técnica que produzca evidenc
 │   │   ├── infrastructure/
 │   │   ├── distributed-systems/
 │   │   └── reliability/
+│   ├── subjects/
+│   │   ├── algorithms-and-data-structures/
+│   │   ├── containers-and-orchestration/
+│   │   ├── system-design-studio/
+│   │   └── ... (otras materias)
 │   ├── knowledge-base/
 │   │   ├── fundamentals/
 │   │   ├── cloud/
@@ -78,6 +83,33 @@ Desarrollar un sistema de aprendizaje y ejecución técnica que produzca evidenc
     └── salary/
 ```
 
+## Cómo usar las carpetas
+- `docs/subjects/`: planificación curricular por materia. Aquí defines objetivos, semanas, evaluación y criterios de salida (`syllabus.md`).
+- `docs/classes/`: notas de ejecución por sesión de estudio/lab. Deben incluir experimento, métricas y decisiones.
+- `docs/knowledge-base/`: conocimiento estable y reusable. Solo entra contenido que ya validaste en práctica.
+- `docs/architecture/adrs/`: decisiones de arquitectura con contexto, alternativa y consecuencias.
+- `docs/architecture/system-designs/`: diseños completos listos para revisión técnica (NFRs, capacidad, failure modes, rollout).
+- `docs/reference/`: fuentes primarias (papers, libros, links) que sustentan decisiones.
+- `ops/runbooks/`: procedimientos operativos accionables (deploy, rollback, mitigación).
+- `ops/postmortems/`: análisis de incidentes con timeline UTC, RCA y acciones con due date.
+- `ops/sli-slo/`: definición y seguimiento de SLI/SLO/error budget por servicio.
+- `portfolio/case-studies/`: evidencia de impacto técnico y de negocio para entrevistas/revisión senior.
+- `portfolio/reference-architectures/`: arquitecturas reutilizables para problemas recurrentes.
+- `portfolio/artifacts/`: evidencias de soporte (diagramas, tablas de capacidad, reportes).
+- `tracking/`: revisiones semanales/mensuales y control de KPIs.
+- `standards/`: reglas del sistema (commits, naming, escritura técnica, público vs privado).
+- `templates/`: plantillas base para asegurar calidad homogénea de documentos.
+- `blog/`: borradores y artículos publicados cuando conviertas artefactos en contenido público.
+- `private/`: trabajo sensible o personal no publicable.
+
+## Flujo recomendado por cada sesión
+1. Abrir materia en `docs/subjects/*/syllabus.md` y elegir objetivo de la semana.
+2. Ejecutar estudio/lab y registrar evidencia en `docs/classes/`.
+3. Promover aprendizajes estables a `docs/knowledge-base/`.
+4. Si hubo decisión o diseño, crear ADR o system design.
+5. Si hubo incidente/simulación, crear postmortem y acciones.
+6. Actualizar KPIs en `PROGRESS.md` y revisión en `tracking/`.
+
 ## Flujo de trabajo recomendado
 1. Captura clase o lectura en `docs/classes/` usando `templates/class-template.md`.
 2. Extrae conocimiento estable a `docs/knowledge-base/`.
@@ -92,6 +124,7 @@ Desarrollar un sistema de aprendizaje y ejecución técnica que produzca evidenc
 - Convención de nombres: `standards/file-naming-convention.md`
 - Guía de escritura técnica: `standards/technical-writing-style-guide.md`
 - Separación público/privado: `standards/public-private-content.md`
+- Plantilla de syllabus: `templates/syllabus-template.md`
 
 ## Criterio de calidad (audit-ready)
 Un documento se considera aceptable solo si:

@@ -1,6 +1,5 @@
 # Sensitive/private working area
 private/**
-!private/.gitkeep
 
 # Common secret and local artifacts
 *.pem
